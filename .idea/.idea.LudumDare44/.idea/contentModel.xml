@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\oakus\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\oakus\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_LudumDare44.886450295.00" t="ExcludeRecursive" />
+    <e p="F:\UnityProjs_local\LudumDare44" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="GameState.cs" t="Include" />
+          <e p="GameStateContext.cs" t="Include" />
+          <e p="Item" t="Include">
+            <e p="DistractionRemoval.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ItemAsset.cs" t="Include" />
+            <e p="ItemObject.cs" t="Include" />
+            <e p="ItemPool.cs" t="Include" />
+            <e p="ItemProcessor.cs" t="Include" />
+            <e p="ItemSpawner.cs" t="Include" />
+          </e>
+          <e p="Locator.cs" t="Include" />
+          <e p="OakFramework2" t="Include">
+            <e p="GameObjectCache.cs" t="Include" />
+            <e p="Gameplay" t="Include">
+              <e p="ObjectPool.cs" t="Include" />
+            </e>
+            <e p="GameSingleton.cs" t="Include" />
+            <e p="OakMonoBehaviour.cs" t="Include" />
+            <e p="SceneSingleton.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+          </e>
+          <e p="ProjectConstants.cs" t="Include" />
+          <e p="StreamMover.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="LudumDare44.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
