@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: ProjectConstants
   m_EditorClassIdentifier: 
   DefaultItemDimensions: {x: 0.3, y: 0.3}
+  MaxTime: 100
+  MaxFocus: 100
+  StartFocus: 0.5
+  FocusAfterFlow: 0.6
+  FocusAfterDeplete: 0.4
+  DistractedDuration: 8
+  FlowDuration: 8

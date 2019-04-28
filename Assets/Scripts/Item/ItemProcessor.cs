@@ -15,20 +15,17 @@ namespace DefaultNamespace
             ProcessItem(itemObject);
         }
 
-        private void ProcessItem(ItemObject item)
+        public void ProcessItem(ItemObject item)
         {
             var points = item.ItemAsset.value * 
                          (item.ItemAsset.itemType == ItemAsset.ItemType.Focus ? 1 : -1);
 
             if (item.ItemAsset.itemType == ItemAsset.ItemType.Distraction)
             {
-                GameState.instance.Time += points;
+                GameStats.instance.Time += points;
             }
 
-            GameState.instance.Focus += points;
-
-            GameState.instance.Time = Mathf.Clamp(GameState.instance.Time, 0, GameStateContext.instance.MaxTime);
-            GameState.instance.Focus = Mathf.Clamp(GameState.instance.Focus, 0, GameStateContext.instance.MaxFocus);            
+            GameStats.instance.Focus += points;
         }
     }
 }

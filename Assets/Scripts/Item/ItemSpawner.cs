@@ -1,11 +1,22 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
 {
+    [Serializable]
+    public class WieghtedItemAsset
+    {
+        public ItemAsset asset;
+        public float weight = 1.0f;
+        public Vector2 Range { get; set; }
+    }
+    
     public class ItemSpawner : MonoBehaviour
     {
-        public List<ItemAsset> assetPool;
+        public List<WieghtedItemAsset> assetPool;
         
         public ItemPool itemPool;
 
@@ -16,10 +27,12 @@ namespace DefaultNamespace
         public StreamMover streamMover;
 
         private float _nextSpawnTime;
+        private float _assetWeightTotal;
 
         private void Awake()
         {
-            GenerateNextSpawnTime();   
+            GenerateNextSpawnTime();
+            RecalculateRanges();
         }
 
         private void Update()
@@ -34,14 +47,31 @@ namespace DefaultNamespace
             }
         }
 
+        private void RecalculateRanges()
+        {
+            _assetWeightTotal = assetPool.Sum(wa => wa.weight);
+            
+            float rangeStart = 0;
+            for (int i = 0; i < assetPool.Count; i++)
+            {
+                var item = assetPool[i];
+                item.Range = new Vector2(rangeStart, rangeStart + item.weight);
+
+                rangeStart = item.Range.y;
+            }
+        }
+        
         private ItemAsset GetNextAsset()
         {
-            return assetPool[Random.Range(0, assetPool.Count)];
+            var rand = Random.Range(0, _assetWeightTotal);
+            var asset = assetPool.Find(wa => rand > wa.Range.x && rand < wa.Range.y);
+            
+            return asset.asset;
         }
 
         private void GenerateNextSpawnTime()
         {
-            _nextSpawnTime = Time.time + Random.Range(randomSpan.x, randomSpan.y);
+            _nextSpawnTime = _nextSpawnTime + Random.Range(randomSpan.x, randomSpan.y);
         }
     }
 }

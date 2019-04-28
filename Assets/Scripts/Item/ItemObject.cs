@@ -8,6 +8,7 @@ namespace DefaultNamespace
     public class ItemObject : PoolObject<ItemPool, ItemObject, ItemAsset>
     {
         private SpriteRenderer _spriteRenderer;
+        private BoxCollider2D _boxCollider2D;
 
         private ItemAsset _itemAsset;
         public ItemAsset ItemAsset => _itemAsset;
@@ -17,6 +18,7 @@ namespace DefaultNamespace
         protected override void SetReferences()
         {
             _spriteRenderer = instance.GetComponent<SpriteRenderer>();
+            _boxCollider2D = instance.GetComponent<BoxCollider2D>();
             _item = instance.GetComponent<Item>();
             _item.ItemObject = this;
         }
@@ -39,8 +41,12 @@ namespace DefaultNamespace
                 scale = Locator.Instance.ProjectConstants.DefaultItemDimensions.y / _spriteRenderer.bounds.size.y;
             }
             instance.transform.localScale = new Vector3(scale, scale, 1);
-            
             instance.gameObject.SetActive(true);
+            _boxCollider2D.size = new Vector2(Locator.Instance.ProjectConstants.DefaultItemDimensions.x / scale,
+                Locator.Instance.ProjectConstants.DefaultItemDimensions.y / scale);
+            _boxCollider2D.enabled = true;
+            _spriteRenderer.color = Color.white;
+            
             _itemAsset = asset;
         }
 

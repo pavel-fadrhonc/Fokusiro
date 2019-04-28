@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ninja
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: pcguy
+    uniqueID: 2446743357
+    locked: 0
+  - name: particles
+    uniqueID: 3025549685
     locked: 0

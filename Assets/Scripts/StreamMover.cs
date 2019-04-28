@@ -22,6 +22,9 @@ namespace DefaultNamespace
 
         public void AddItem(Transform item)
         {
+            if (_items.Contains(item))
+                return;
+            
             _items.Add(item);
         }
 
