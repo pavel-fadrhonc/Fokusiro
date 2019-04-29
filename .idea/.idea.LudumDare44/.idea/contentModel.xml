@@ -4,6 +4,7 @@
     <e p="C:\Users\oakus\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\oakus\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_LudumDare44.886450295.00" t="ExcludeRecursive" />
     <e p="F:\UnityProjs_local\LudumDare44" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -31,13 +32,17 @@
           <e p="Animation" t="Include">
             <e p="AnimationEvent.cs" t="Include" />
             <e p="RandomSpriteSwap.cs" t="Include" />
+            <e p="WaterShaderFlow.cs" t="Include" />
           </e>
-          <e p="GameEvents.cs" t="Include" />
-          <e p="GameEventsManager.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
-          <e p="GameStats.cs" t="Include" />
-          <e p="HitParticle.cs" t="Include" />
-          <e p="HitParticlePool.cs" t="Include" />
+          <e p="Gameplay" t="Include">
+            <e p="GameEventsManager.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="LevelSettings.cs" t="Include" />
+            <e p="LevelTimer.cs" t="Include" />
+            <e p="NaturalFocusDepletion.cs" t="Include" />
+            <e p="NinjaControl.cs" t="Include" />
+            <e p="StreamMover.cs" t="Include" />
+          </e>
           <e p="Item" t="Include">
             <e p="Item.cs" t="Include" />
             <e p="ItemAsset.cs" t="Include" />
@@ -48,11 +53,19 @@
             <e p="ItemRemoval.cs" t="Include" />
             <e p="ItemSpawner.cs" t="Include" />
           </e>
-          <e p="LevelTimer.cs" t="Include" />
+          <e p="LevelLoader.cs" t="Include" />
           <e p="Locator.cs" t="Include" />
-          <e p="NaturalFocusDepletion.cs" t="Include" />
-          <e p="NinjaControl.cs" t="Include" />
+          <e p="Model" t="Include">
+            <e p="GameEvents.cs" t="Include" />
+            <e p="GameState.cs" t="Include" />
+            <e p="GameStats.cs" t="Include" />
+            <e p="PlayerState.cs" t="Include" />
+          </e>
           <e p="OakFramework2" t="Include">
+            <e p="Editor" t="Include">
+              <e p="EnumFlagDrawer.cs" t="Include" />
+            </e>
+            <e p="EnumFlagAttribute.cs" t="Include" />
             <e p="GameObjectCache.cs" t="Include" />
             <e p="Gameplay" t="Include">
               <e p="ObjectPool.cs" t="Include" />
@@ -62,13 +75,18 @@
             <e p="SceneSingleton.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
-          <e p="PlayerState.cs" t="Include" />
+          <e p="Pooling" t="Include">
+            <e p="HitParticle.cs" t="Include" />
+            <e p="HitParticlePool.cs" t="Include" />
+          </e>
           <e p="ProjectConstants.cs" t="Include" />
-          <e p="StreamMover.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="BarUpdate.cs" t="Include" />
+            <e p="DayUpdater.cs" t="Include" />
+            <e p="ExposeGameEvents.cs" t="Include" />
+            <e p="MenuOpener.cs" t="Include" />
+            <e p="PlaceTimeForLevelMarker.cs" t="Include" />
           </e>
-          <e p="WaterShaderFlow.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="FlowingLine.shader" t="Include" />
@@ -117,41 +135,6 @@
               <e p="Anton OFL.txt" t="Include" />
               <e p="Bangers - OFL.txt" t="Include" />
               <e p="Oswald-Bold - OFL.txt" t="Include" />
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="Benchmark01.cs" t="Include" />
-              <e p="Benchmark01_UGUI.cs" t="Include" />
-              <e p="Benchmark02.cs" t="Include" />
-              <e p="Benchmark03.cs" t="Include" />
-              <e p="Benchmark04.cs" t="Include" />
-              <e p="CameraController.cs" t="Include" />
-              <e p="ChatController.cs" t="Include" />
-              <e p="EnvMapAnimator.cs" t="Include" />
-              <e p="ObjectSpin.cs" t="Include" />
-              <e p="ShaderPropAnimator.cs" t="Include" />
-              <e p="SimpleScript.cs" t="Include" />
-              <e p="SkewTextExample.cs" t="Include" />
-              <e p="TeleType.cs" t="Include" />
-              <e p="TextConsoleSimulator.cs" t="Include" />
-              <e p="TextMeshProFloatingText.cs" t="Include" />
-              <e p="TextMeshSpawner.cs" t="Include" />
-              <e p="TMP_DigitValidator.cs" t="Include" />
-              <e p="TMP_ExampleScript_01.cs" t="Include" />
-              <e p="TMP_FrameRateCounter.cs" t="Include" />
-              <e p="TMP_PhoneNumberValidator.cs" t="Include" />
-              <e p="TMP_TextEventCheck.cs" t="Include" />
-              <e p="TMP_TextEventHandler.cs" t="Include" />
-              <e p="TMP_TextInfoDebugTool.cs" t="Include" />
-              <e p="TMP_TextSelector_A.cs" t="Include" />
-              <e p="TMP_TextSelector_B.cs" t="Include" />
-              <e p="TMP_UiFrameRateCounter.cs" t="Include" />
-              <e p="TMPro_InstructionOverlay.cs" t="Include" />
-              <e p="VertexColorCycler.cs" t="Include" />
-              <e p="VertexJitter.cs" t="Include" />
-              <e p="VertexShakeA.cs" t="Include" />
-              <e p="VertexShakeB.cs" t="Include" />
-              <e p="VertexZoom.cs" t="Include" />
-              <e p="WarpTextExample.cs" t="Include" />
             </e>
           </e>
           <e p="Fonts" t="Include">

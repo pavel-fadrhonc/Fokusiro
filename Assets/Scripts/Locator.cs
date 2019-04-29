@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class Locator : GameSingleton<Locator>
+    public class Locator : SceneSingleton<Locator>
     {
         [SerializeField]
         private ProjectConstants _projectConstants;

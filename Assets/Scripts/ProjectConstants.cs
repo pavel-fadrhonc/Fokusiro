@@ -27,5 +27,8 @@ namespace DefaultNamespace
 
         public AudioClip distractionPunchedClip;
         public AudioClip focusPunchedClip;
+
+        [Tooltip("the progress of difficulty in terms of percent during the course of day.")]
+        public AnimationCurve progressCurve;
     }
 }

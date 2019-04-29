@@ -21,7 +21,31 @@ MonoBehaviour:
   DistractedDuration: 8
   FlowDuration: 12
   FailState: 0.5
-  DayDuration: 90
+  DayDuration: 60
   distractionPunchedClip: {fileID: 8300000, guid: 9341ddb30ecf29344b0d320a7b261d37,
     type: 3}
   focusPunchedClip: {fileID: 8300000, guid: 3e0ca4db0c88013439c49fdbf3665855, type: 3}
+  progressCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.9977112
+      inSlope: 1
+      outSlope: 0.5022888
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1.5
+      inSlope: 0.5022888
+      outSlope: 1
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

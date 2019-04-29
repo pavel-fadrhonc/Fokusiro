@@ -17,25 +17,40 @@ namespace DefaultNamespace
     public class ItemSpawner : MonoBehaviour
     {
         public List<WieghtedItemAsset> assetPool;
-        
-        public ItemPool itemPool;
 
         [Tooltip("Next spawn time will get chosen randomly in this span.")]
         public Vector2 randomSpan;
 
-        public Transform spawnPosition;
         public StreamMover streamMover;
+        
+        private Transform _spawnPosition;
+        private ItemPool _itemPool;        
 
+        public Vector2 startRandomSpanTime { get; private set; }
+        
         private float _nextSpawnTime;
         private float _assetWeightTotal;
 
         private void Awake()
         {
-            GenerateNextSpawnTime();
-            RecalculateRanges();
+            startRandomSpanTime = randomSpan;
+            _spawnPosition = streamMover.start;
+            _itemPool = FindObjectOfType<ItemPool>();
             
+            GenerateNextSpawnTime();
+            RecalculateRanges();   
+        }
+
+        private void OnEnable()
+        {
             GameEvents.instance.TimesUp += OnTimesUpHandler;
-            GameEvents.instance.TimeEatenByDistractions += OnTimeEatenByDistractionsHandler;
+            GameEvents.instance.TimeEatenByDistractions += OnTimeEatenByDistractionsHandler;            
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.instance.TimesUp -= OnTimesUpHandler;
+            GameEvents.instance.TimeEatenByDistractions -= OnTimeEatenByDistractionsHandler;                        
         }
 
         private void OnTimeEatenByDistractionsHandler()
@@ -52,10 +67,10 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            if (Time.time > _nextSpawnTime)
+            if (Time.timeSinceLevelLoad > _nextSpawnTime)
             {
-                var item = itemPool.Pop(GetNextAsset());
-                item.instance.transform.position = spawnPosition.position;
+                var item = _itemPool.Pop(GetNextAsset());
+                item.instance.transform.position = _spawnPosition.position;
                 streamMover.AddItem(item.instance.transform);
                 
                 GenerateNextSpawnTime();

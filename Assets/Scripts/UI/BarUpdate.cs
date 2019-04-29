@@ -17,10 +17,10 @@ namespace DefaultNamespace.UI
         
         private void Awake()
         {
-            GameStats.instance.GameStateChangedEvent += OnGameStateChangedHandler;
+            GameStats.instance.GameStatsChangedEvent += OnGameStatsChangedHandler;
         }
 
-        private void OnGameStateChangedHandler()
+        private void OnGameStatsChangedHandler()
         {
             switch (barUpdateType)
             {
@@ -31,6 +31,11 @@ namespace DefaultNamespace.UI
                     fillImage.fillAmount = GameStats.instance.Focus / GameStats.instance.MaxFocus;
                     break;
             }
+        }
+
+        private void OnDisable()
+        {
+            GameStats.instance.GameStatsChangedEvent -= OnGameStatsChangedHandler;
         }
     }
 }
