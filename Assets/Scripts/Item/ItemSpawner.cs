@@ -33,6 +33,21 @@ namespace DefaultNamespace
         {
             GenerateNextSpawnTime();
             RecalculateRanges();
+            
+            GameEvents.instance.TimesUp += OnTimesUpHandler;
+            GameEvents.instance.TimeEatenByDistractions += OnTimeEatenByDistractionsHandler;
+        }
+
+        private void OnTimeEatenByDistractionsHandler()
+        {
+            streamMover.Items.ForEach(it => it.GetComponent<Item>().ItemObject.ReturnToPool());
+            enabled = false;            
+        }
+
+        private void OnTimesUpHandler()
+        {
+            streamMover.Items.ForEach(it => it.GetComponent<Item>().ItemObject.ReturnToPool());
+            enabled = false;
         }
 
         private void Update()

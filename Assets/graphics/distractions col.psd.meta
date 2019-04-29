@@ -1,0 +1,508 @@
+fileFormatVersion: 2
+guid: 74bd9b6073f026f42a12f327658995df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8300446187124780591
+    second: distractions col_0
+  - first:
+      213: -2774320446201774440
+    second: distractions col_1
+  - first:
+      213: 4663832532856141678
+    second: distractions col_2
+  - first:
+      213: -4909958888608656965
+    second: distractions col_7
+  - first:
+      213: 8269651861031025002
+    second: distractions col_8
+  - first:
+      213: 46561386125093019
+    second: distractions col_9
+  - first:
+      213: -8435720305763471148
+    second: distractions col_10
+  - first:
+      213: -3739491030760209784
+    second: distractions col_11
+  - first:
+      213: 4530717349944835711
+    second: distractions col_12
+  - first:
+      213: -4435736149951155076
+    second: distractions col_13
+  - first:
+      213: -7101207438842593540
+    second: distractions col_14
+  - first:
+      213: 4284812947147766870
+    second: distractions col_15
+  - first:
+      213: -7032064119396412963
+    second: distractions col_16
+  - first:
+      213: 2394987616527783298
+    second: distractions col_17
+  - first:
+      213: 6901104149866803516
+    second: distractions col_18
+  - first:
+      213: 9153166431617496541
+    second: distractions col_19
+  - first:
+      213: 7842529302871600021
+    second: distractions col_20
+  - first:
+      213: 3316694635629609510
+    second: distractions col_21
+  - first:
+      213: 389406919699051365
+    second: distractions col_22
+  - first:
+      213: 4462622164082587096
+    second: distractions col_3
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: distractions col_0
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1883
+        width: 266
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac207eb6a019ca4892039d8cd51b414
+      internalID: -8300446187124780591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_1
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1859
+        width: 319
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3e2ccc3d49ad149b5c5206f937ae07
+      internalID: -2774320446201774440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_2
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1914
+        width: 322
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01e4abb6677b1c428573f629647892d
+      internalID: 4663832532856141678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1430
+        width: 309
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfc5695860e006458fe25b928c17cd2
+      internalID: 8269651861031025002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_9
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1414
+        width: 452
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8fed7aee15a4e4d95d20f2b233757a
+      internalID: 46561386125093019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_10
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 1265
+        width: 740
+        height: 532
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4515ac93d00ae0449c7c830813c3218
+      internalID: -8435720305763471148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_11
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 1430
+        width: 293
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5655344970d7e13429d112af91f5d110
+      internalID: -3739491030760209784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_12
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 844
+        width: 525
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847a5304a3dff044892be01cd386050f
+      internalID: 4530717349944835711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_14
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 815
+        width: 421
+        height: 399
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba594e4b0024cf4b981fbe1de23a267
+      internalID: -7101207438842593540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_15
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 888
+        width: 352
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818fd053919dd0f4a9622f0337abaa26
+      internalID: 4284812947147766870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_16
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 901
+        width: 315
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94155a02c95a5be4491d6447ca623adc
+      internalID: -7032064119396412963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 289
+        width: 531
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275a818920a0ca640a86fd28d3e68ae3
+      internalID: 6901104149866803516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_19
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 285
+        width: 494
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f495c3a3552d848bcdd249ef5d1cb5
+      internalID: 9153166431617496541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_20
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 271
+        width: 409
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3e1f91d5b6c214bb11c7c01eec13b7
+      internalID: 7842529302871600021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_22
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 273
+        width: 341
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ce4389a7937f84986bd9f78a240918
+      internalID: 389406919699051365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: distractions col_3
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1868
+        width: 372
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4529a98599c4c4aa2bb993efc7be2d
+      internalID: 4462622164082587096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 64cbed67c4dba0c44a08335330632249
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

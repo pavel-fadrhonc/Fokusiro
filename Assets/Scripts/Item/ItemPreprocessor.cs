@@ -11,7 +11,20 @@ namespace DefaultNamespace
         public ParticleSystem distractionPS;
         public ItemProcessor itemProcessor;
 
+        public List<AudioClip> focusAbsorbedClips;
+        public List<AudioClip> distractionAbsorbedClips;
+
         private List<Item> _items = new List<Item>();
+
+        private List<StreamMover> _streamMovers;
+
+        private List<AudioSource> _audioSources;
+
+        private void Awake()
+        {
+            _streamMovers = new List<StreamMover>(FindObjectsOfType<StreamMover>());
+            _audioSources = new List<AudioSource>(GetComponentsInChildren<AudioSource>());
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -24,6 +37,7 @@ namespace DefaultNamespace
             _items.Add(item);
             other.enabled = false;
             item.transform.DOMove(target.position, 1.0f).onComplete += () => PreprocessItem(item);
+            PlayRandomItemAbsorbedSound(itemObject.ItemAsset.itemType);
         }
 
         private void PreprocessItem(Item item)
@@ -42,6 +56,7 @@ namespace DefaultNamespace
                     {
                         itemProcessor.ProcessItem(item.ItemObject);
                         item.ItemObject.ReturnToPool();
+                        _streamMovers.ForEach(sm=>sm.RemoveItem(item.transform));
                     };
             }
             else
@@ -55,7 +70,26 @@ namespace DefaultNamespace
                     {
                         itemProcessor.ProcessItem(item.ItemObject); 
                         item.ItemObject.ReturnToPool();
+                        _streamMovers.ForEach(sm=>sm.RemoveItem(item.transform));
                     };
+            }
+        }
+
+        private void PlayRandomItemAbsorbedSound(ItemAsset.ItemType itemType)
+        {
+            for (int i = 0; i < _audioSources.Count; i++)
+            {
+                var audioS = _audioSources[i];
+                if (audioS.isPlaying)
+                    continue;
+
+                var clip = itemType == ItemAsset.ItemType.Focus
+                    ? focusAbsorbedClips[Random.Range(0, focusAbsorbedClips.Count)]
+                    : distractionAbsorbedClips[Random.Range(0, distractionAbsorbedClips.Count)];
+
+                audioS.clip = clip;
+                audioS.Play();
+                break;
             }
         }
     }

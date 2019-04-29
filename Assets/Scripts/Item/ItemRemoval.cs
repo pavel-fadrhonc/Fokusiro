@@ -12,7 +12,14 @@ namespace DefaultNamespace
         
         public bool triggerEffect;
         public HitParticlePool effectPool;
+
+        private AudioSource _audioSource;
         
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             var item = other.gameObject.GetComponent<Item>();
@@ -29,6 +36,14 @@ namespace DefaultNamespace
                 item.GetComponent<SpriteRenderer>().DOColor(new Color(1f, 1f, 1f, 0f), 1f);
                 var ps = effectPool.Pop();
                 ps.instance.transform.position = item.transform.position;
+
+                if (_audioSource != null)
+                {
+                    _audioSource.clip = item.ItemObject.ItemAsset.itemType == ItemAsset.ItemType.Focus
+                        ? Locator.Instance.ProjectConstants.focusPunchedClip
+                        : Locator.Instance.ProjectConstants.distractionPunchedClip;
+                    _audioSource.Play();
+                }
             }
             else
             {

@@ -12,11 +12,42 @@ namespace DefaultNamespace
         public List<ParticleSystem> shieldPS;
         public Animator flowReachedTextAnim;
         public Animator distractedTextAnim;
+        public Animator levelCompleteAnim;
+        public Animator timeDistractedAnim;
+
+        public AudioSource gameEventAudioSource;
+        public AudioSource levelEndAudioSource;
+
+        public AudioClip flowReachedClip;
+        public AudioClip distractedClip;
+        public AudioClip levelCompleteClip;
+        public AudioClip levelFailedClip;
         
         private void Awake()
         {
             GameEvents.instance.FlowReached += OnFlowReachedHandler;
             GameEvents.instance.FocusDepleted += OnFocusDepletedHandler;
+            GameEvents.instance.TimesUp += OnTimesUpHandler;
+            GameEvents.instance.TimeEatenByDistractions += OnTimeEatenByDistractionsHandler;
+        }
+
+        private void OnTimeEatenByDistractionsHandler()
+        {
+            timeDistractedAnim.gameObject.SetActive(true);
+            timeDistractedAnim.SetTrigger("textAnim");
+            ninjaAnimator.SetTrigger("StartDistracted");
+            levelEndAudioSource.clip = levelFailedClip;
+            levelEndAudioSource.Play();
+        }
+
+        private void OnTimesUpHandler()
+        {
+            levelCompleteAnim.gameObject.SetActive(true);
+            levelCompleteAnim.SetTrigger("textAnim");
+            levelEndAudioSource.clip = levelCompleteClip;
+            levelEndAudioSource.Play();
+
+            //TODO: trigger transition to next level after some while
         }
 
         private void OnFocusDepletedHandler()
@@ -28,6 +59,8 @@ namespace DefaultNamespace
             distractedTextAnim.SetTrigger("textAnim");
             ninjaAnimator.SetTrigger("StartDistracted");
             PlayerState.instance.State = ePlayerState.Distracted;
+            gameEventAudioSource.clip = distractedClip;
+            gameEventAudioSource.Play();
             transform.DOScale(transform.localScale, Locator.Instance.ProjectConstants.DistractedDuration).onComplete +=
                 OnDistractedEnded;
         }
@@ -54,8 +87,12 @@ namespace DefaultNamespace
             PlayerState.instance.State = ePlayerState.InFlow;
             flowReachedTextAnim.gameObject.SetActive(true);
             flowReachedTextAnim.SetTrigger("FlowAnim");
+            gameEventAudioSource.clip = flowReachedClip;
+            gameEventAudioSource.Play();
+            gameEventAudioSource.volume = 0.0f;
+            gameEventAudioSource.DOFade(1.0f, 3.0f);
             
-            transform.DOScale(transform.localScale, Locator.Instance.ProjectConstants.DistractedDuration).onComplete +=
+            transform.DOScale(transform.localScale, Locator.Instance.ProjectConstants.FlowDuration).onComplete +=
                 OnFlowEnded;            
         }
 
@@ -66,6 +103,7 @@ namespace DefaultNamespace
             
             ninjaAnimator.SetTrigger("EndFlow");
             _checkForFlowEnd = true;
+            gameEventAudioSource.DOFade(0.0f, 4.0f);
         }
 
         private bool _checkForFlowEnd;

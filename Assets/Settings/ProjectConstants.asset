@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122036719ed24f3098f280f437787e8a, type: 3}
   m_Name: ProjectConstants
   m_EditorClassIdentifier: 
-  DefaultItemDimensions: {x: 0.3, y: 0.3}
+  DefaultItemDimensions: {x: 0.8, y: 0.8}
   MaxTime: 100
   MaxFocus: 100
   StartFocus: 0.5
   FocusAfterFlow: 0.6
   FocusAfterDeplete: 0.4
   DistractedDuration: 8
-  FlowDuration: 8
+  FlowDuration: 12
+  FailState: 0.5
+  DayDuration: 90
+  distractionPunchedClip: {fileID: 8300000, guid: 9341ddb30ecf29344b0d320a7b261d37,
+    type: 3}
+  focusPunchedClip: {fileID: 8300000, guid: 3e0ca4db0c88013439c49fdbf3665855, type: 3}

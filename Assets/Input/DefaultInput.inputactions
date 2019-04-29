@@ -1,0 +1,126 @@
+{
+    "name": "DefaultInput",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "cc2c9fb5-cbe4-44db-a574-0268f6ea6aed",
+            "actions": [
+                {
+                    "name": "AttackRight",
+                    "id": "d098b6c6-c96f-4357-aae6-94bbc5477d1a",
+                    "expectedControlLayout": "Key",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
+                },
+                {
+                    "name": "AttackLeft",
+                    "id": "01ee1c80-bc77-4638-b415-4dc5d420e2a2",
+                    "expectedControlLayout": "Key",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
+                },
+                {
+                    "name": "AttackTop",
+                    "id": "ab74c4c3-c151-48fa-98cc-381ca7e42b0c",
+                    "expectedControlLayout": "Key",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "01cd5d45-7956-4690-896d-06e5ea51b568",
+                    "path": "<Keyboard>/d",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Default",
+                    "action": "AttackRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "1a1dae62-ee7d-4519-a048-e587676afbed",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Default",
+                    "action": "AttackRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "48272478-82bf-4456-b2fe-2c5497fc6082",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Default",
+                    "action": "AttackLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "bc8d4bb4-2f70-4673-a10b-05350490002c",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Default",
+                    "action": "AttackLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "7e8ee02e-0250-4c90-977f-c1506127a863",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Default",
+                    "action": "AttackTop",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "58114b7a-c0f4-453c-bc2c-594790633bf8",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Default",
+                    "action": "AttackTop",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Default",
+            "basedOn": "",
+            "bindingGroup": "Default",
+            "devices": []
+        }
+    ]
+}

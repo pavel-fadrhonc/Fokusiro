@@ -10,6 +10,11 @@ namespace DefaultNamespace
 
         public float streamSpeed;
 
+        public List<Transform> Items
+        {
+            get => _items;
+        }
+
         private List<Transform> _items = new List<Transform>();
         private void Update()
         {
@@ -32,5 +37,6 @@ namespace DefaultNamespace
         {
             _items.Remove(item);
         }
+
     }
 }

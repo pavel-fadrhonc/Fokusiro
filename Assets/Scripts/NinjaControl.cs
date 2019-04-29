@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Input;
 
@@ -8,16 +9,20 @@ namespace DefaultNamespace
     {
         public Collider2D leftLegRemoval;
         public Collider2D rightLegRemoval;
+
+        public List<AudioClip> karateChops = new List<AudioClip>();
         
         private Animator _animator;
         private Vector2 _randomSpan = new Vector2(2f,3f);
         private float _nextIdleChangeTime;
         private int _idleHash;
+        private AudioSource _audioSource;
 
         public DefaultInput _input;
         
         private void Awake()
         {
+            _audioSource = GetComponent<AudioSource>();
             _animator = GetComponent<Animator>();
             _nextIdleChangeTime = Time.time + Random.Range(_randomSpan.x, _randomSpan.y);
 
@@ -26,6 +31,8 @@ namespace DefaultNamespace
             _input.Player.SetCallbacks(this);
             
             PlayerState.instance.PlayerStateChangedEvent += OnPlayerStateChangedHandler;
+            GameEvents.instance.TimesUp += () => _input.Disable();
+            GameEvents.instance.TimeEatenByDistractions += () => _input.Disable();
         }
 
         private void Update()
@@ -91,27 +98,39 @@ namespace DefaultNamespace
         {
             if (leftOrRight == 0)
             {
-                leftLegRemoval.gameObject.SetActive(activate);
+                leftLegRemoval.enabled = activate;
             }
             else
             {
-                rightLegRemoval.gameObject.SetActive(activate);
+                rightLegRemoval.enabled = activate;
             }   
         }
 
         public void OnAttackRight(InputAction.CallbackContext context)
         {
             _animator.SetTrigger("PunchRight");
+            PlayRandomKarateSound();
         }
 
         public void OnAttackLeft(InputAction.CallbackContext context)
         {
             _animator.SetTrigger("PunchLeft");
+            PlayRandomKarateSound();
         }
 
         public void OnAttackTop(InputAction.CallbackContext context)
         {
             _animator.SetTrigger("PunchUp");
+            PlayRandomKarateSound();
+        }
+
+        private void PlayRandomKarateSound()
+        {
+            if (_audioSource.isPlaying)
+                _audioSource.Stop();
+
+            _audioSource.clip = karateChops[Random.Range(0, karateChops.Count)];
+            _audioSource.Play();
         }
     }
 }
