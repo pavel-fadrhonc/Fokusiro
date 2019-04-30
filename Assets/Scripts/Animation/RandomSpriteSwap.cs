@@ -22,7 +22,7 @@ namespace DefaultNamespace.Animation
 
         private void Update()
         {
-            if (Time.time > _nextSpawnTime)
+            if (Time.timeSinceLevelLoad > _nextSpawnTime)
             {
                 _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Count)];
                 

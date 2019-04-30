@@ -13,6 +13,8 @@ namespace DefaultNamespace
         public bool triggerEffect;
         public HitParticlePool effectPool;
 
+        public bool focusItemsLosingPoints;
+
         private AudioSource _audioSource;
         
         private void Awake()
@@ -26,6 +28,9 @@ namespace DefaultNamespace
             if (item == null ||
                 (removeOnlyDistractions && item.ItemObject.ItemAsset.itemType == ItemAsset.ItemType.Focus))
                 return;
+
+            if (focusItemsLosingPoints && item.ItemObject.ItemAsset.itemType == ItemAsset.ItemType.Focus)
+                GameStats.instance.Focus -= item.ItemObject.ItemAsset.value;
             
             streamMovers.ForEach(sm => sm.RemoveItem(item.transform));
             if (triggerEffect)

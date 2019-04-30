@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    [ExecuteInEditMode]
     public class WaterShaderFlow : MonoBehaviour
     {
         private Material _mat;
