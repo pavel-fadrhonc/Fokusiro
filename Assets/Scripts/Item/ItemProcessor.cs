@@ -17,15 +17,17 @@ namespace DefaultNamespace
 
         public void ProcessItem(ItemObject item)
         {
-            var points = item.ItemAsset.value * 
-                         (item.ItemAsset.itemType == ItemAsset.ItemType.Focus ? 1 : -1);
+            var points = item.ItemAsset.value;
 
             if (item.ItemAsset.itemType == ItemAsset.ItemType.Distraction)
             {
-                GameStats.instance.Time += points;
+                GameStats.instance.Time -= points;
+                GameStats.instance.Focus -= points * Locator.Instance.ProjectConstants.DistractionFocusPointMultiplicator;
             }
-
-            GameStats.instance.Focus += points;
+            else
+            {
+                GameStats.instance.Focus += points;                
+            }
         }
     }
 }

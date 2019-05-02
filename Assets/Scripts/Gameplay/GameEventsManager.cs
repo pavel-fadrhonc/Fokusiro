@@ -43,7 +43,8 @@ namespace DefaultNamespace
         {
             timeDistractedAnim.gameObject.SetActive(true);
             timeDistractedAnim.SetTrigger("textAnim");
-            ninjaAnimator.SetTrigger("StartDistracted");
+            if (PlayerState.instance.State != ePlayerState.Distracted)
+                ninjaAnimator.SetTrigger("StartDistracted");
             levelEndAudioSource.clip = levelFailedClip;
             levelEndAudioSource.Play();
         }
@@ -54,8 +55,6 @@ namespace DefaultNamespace
             levelCompleteAnim.SetTrigger("textAnim");
             levelEndAudioSource.clip = levelCompleteClip;
             levelEndAudioSource.Play();
-
-            //TODO: trigger transition to next level after some while
         }
 
         private void OnFocusDepletedHandler()
@@ -75,7 +74,8 @@ namespace DefaultNamespace
 
         private void OnDistractedEnded()
         {
-            if (PlayerState.instance.State != ePlayerState.Distracted)
+            if (PlayerState.instance.State != ePlayerState.Distracted ||
+                GameState.instance.State == eGameState.Ended)
                 return;            
             
             ninjaAnimator.SetTrigger("EndDistracted");
@@ -94,7 +94,7 @@ namespace DefaultNamespace
             ninjaAnimator.SetTrigger("StartFlow");
             PlayerState.instance.State = ePlayerState.InFlow;
             flowReachedTextAnim.gameObject.SetActive(true);
-            flowReachedTextAnim.SetTrigger("FlowAnim");
+            flowReachedTextAnim.SetTrigger("textAnim");
             gameEventAudioSource.clip = flowReachedClip;
             gameEventAudioSource.Play();
             gameEventAudioSource.volume = 0.0f;

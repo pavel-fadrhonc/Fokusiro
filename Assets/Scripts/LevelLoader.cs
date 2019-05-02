@@ -9,5 +9,10 @@ namespace DefaultNamespace
         {
             SceneManager.LoadScene(levelName);
         }
+
+        public void LoadCatchupDay()
+        {
+            SceneManager.LoadScene("Day_" + PersistentGameInfo.Instance.GetCatchupDay()); 
+        }
     }
 }

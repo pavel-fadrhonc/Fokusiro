@@ -32,9 +32,6 @@ namespace DefaultNamespace
 
             _idleHash = Animator.StringToHash("Idle");
             _input = new DefaultInput();
-            
-            
-            PlayerState.instance.PlayerStateChangedEvent += OnPlayerStateChangedHandler;
         }        
         private void DisableInput()
         {
@@ -62,6 +59,8 @@ namespace DefaultNamespace
                     break;
                 case ePlayerState.Distracted:
                 case ePlayerState.InFlow:
+                    DeactivateRemoval(0);
+                    DeactivateRemoval(1);
                     _input.Player.Disable();
                     break;
             }
@@ -71,6 +70,7 @@ namespace DefaultNamespace
         {
             GameEvents.instance.TimesUp += DisableInput;
             GameEvents.instance.TimeEatenByDistractions += DisableInput;
+            PlayerState.instance.PlayerStateChangedEvent += OnPlayerStateChangedHandler;
             
             _input.Player.SetCallbacks(this);
             _input.Player.Enable();
@@ -80,6 +80,7 @@ namespace DefaultNamespace
         {
             GameEvents.instance.TimesUp -= DisableInput;
             GameEvents.instance.TimeEatenByDistractions -= DisableInput;
+            PlayerState.instance.PlayerStateChangedEvent -= OnPlayerStateChangedHandler;
             
             _input.Player.SetCallbacks(null);
             //_input.Player.Disable();

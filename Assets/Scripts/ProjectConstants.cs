@@ -21,6 +21,8 @@ namespace DefaultNamespace
         public float FlowDuration = 8.0f;
         [Tooltip("[0,1] of maximum time has to remain to pass the level.")]
         public float FailState = 0.5f;
+        [Tooltip("how much more focus is distraction eating compared to time")]
+        public float DistractionFocusPointMultiplicator = 1.8f;
 
         [Tooltip("How long does day last in game in seconds")]
         public float DayDuration = 120f;

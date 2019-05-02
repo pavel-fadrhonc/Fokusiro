@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.Experimental.Input;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
 
 namespace DefaultNamespace
@@ -18,6 +21,12 @@ namespace DefaultNamespace
             GameStats.instance.Time = GameStats.instance.MaxTime;
             GameStats.instance.Focus = GameStats.instance.MaxFocus * Locator.Instance.ProjectConstants.StartFocus;
             
+            var sceneName = SceneManager.GetActiveScene().name;
+            var dayStr = sceneName.Substring(sceneName.LastIndexOf('_') + 1);
+            int day;
+            if (Int32.TryParse(dayStr, out day))
+                GameStats.instance.Day = day;
+            
             GameEvents.instance.Init();
             GameState.instance.Init();
             PlayerState.instance.Init();
@@ -28,7 +37,24 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            var progress = GameStats.instance.ElapsedTime / Locator.Instance.ProjectConstants.DayDuration;
+            if (Keyboard.current.leftCtrlKey.isPressed || Keyboard.current.rightCtrlKey.isPressed)
+            {
+                int day = 0;
+                if (Keyboard.current.numpad1Key.wasPressedThisFrame) day = 1;
+                if (Keyboard.current.numpad2Key.wasPressedThisFrame) day = 2;
+                if (Keyboard.current.numpad3Key.wasPressedThisFrame) day = 3;
+                if (Keyboard.current.numpad4Key.wasPressedThisFrame) day = 4;
+                if (Keyboard.current.numpad5Key.wasPressedThisFrame) day = 5;
+                if (Keyboard.current.numpad6Key.wasPressedThisFrame) day = 6;
+                if (Keyboard.current.numpad7Key.wasPressedThisFrame) day = 7;
+                if (Keyboard.current.numpad8Key.wasPressedThisFrame) day = 8;
+                if (Keyboard.current.numpad9Key.wasPressedThisFrame) day = 9;
+                    
+                if (day > 0)
+                    SceneManager.LoadScene("Day_" + day);
+            }
+            
+            var progress = GameStats.instance.ElapsedTimeInDay / Locator.Instance.ProjectConstants.DayDuration;
             var scalingVal = Locator.Instance.ProjectConstants.progressCurve.Evaluate(progress);            
             
             for (int i = 0; i < _streamMovers.Count; i++)

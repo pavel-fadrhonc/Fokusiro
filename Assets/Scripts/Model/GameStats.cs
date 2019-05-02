@@ -72,14 +72,26 @@ namespace DefaultNamespace
             }
         }
 
-        public float _elapsedTime;
+        private float _elapsedTimeInDay;
 
-        public float ElapsedTime
+        public float ElapsedTimeInDay
         {
-            get => _elapsedTime;
+            get => _elapsedTimeInDay;
             set
             {
-                _elapsedTime = value;
+                _elapsedTimeInDay = value;
+                GameStatsChangedEvent?.Invoke();
+            }
+        }
+
+        private int _day;
+
+        public int Day
+        {
+            get => _day;
+            set
+            {
+                _day = value;
                 GameStatsChangedEvent?.Invoke();
             }
         }

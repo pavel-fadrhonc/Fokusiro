@@ -8,15 +8,9 @@ namespace DefaultNamespace.UI
 {
     public class DayUpdater : MonoBehaviour
     {
-        private void Awake()
+        private void Start()
         {
-            var sceneName = SceneManager.GetActiveScene().name;
-            var dayStr = sceneName.Substring(sceneName.LastIndexOf('_') + 1);
-            int day;
-            if (!Int32.TryParse(dayStr, out day))
-                return;
-
-            GetComponent<TextMeshProUGUI>().text = dayStr;
+            GetComponent<TextMeshProUGUI>().text = GameStats.instance.Day.ToString();
         }
     }
 }

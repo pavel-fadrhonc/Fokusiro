@@ -21,6 +21,7 @@ MonoBehaviour:
   DistractedDuration: 8
   FlowDuration: 12
   FailState: 0.5
+  DistractionFocusPointMultiplicator: 2.2
   DayDuration: 60
   distractionPunchedClip: {fileID: 8300000, guid: 9341ddb30ecf29344b0d320a7b261d37,
     type: 3}

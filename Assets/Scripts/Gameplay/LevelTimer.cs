@@ -33,7 +33,7 @@ namespace DefaultNamespace
         private void Update()
         {
             _elapsedTime += Time.deltaTime;
-            GameStats.instance.ElapsedTime = _elapsedTime;
+            GameStats.instance.ElapsedTimeInDay = _elapsedTime;
             var daySeconds = (_elapsedTime * 8 * 60f * 60f) / Locator.Instance.ProjectConstants.DayDuration;
             var totalSecond = _9amseconds + daySeconds;
             if ((totalSecond) > _5pmseconds)
