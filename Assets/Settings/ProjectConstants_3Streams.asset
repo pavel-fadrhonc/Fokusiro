@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 122036719ed24f3098f280f437787e8a, type: 3}
-  m_Name: ProjectConstants 1
+  m_Name: ProjectConstants_3Streams
   m_EditorClassIdentifier: 
   DefaultItemDimensions: {x: 0.8, y: 0.8}
   MaxTime: 100
@@ -21,6 +21,7 @@ MonoBehaviour:
   DistractedDuration: 8
   FlowDuration: 12
   FailState: 0.5
+  DistractionFocusPointMultiplicator: 1.8
   DayDuration: 60
   distractionPunchedClip: {fileID: 8300000, guid: 9341ddb30ecf29344b0d320a7b261d37,
     type: 3}
