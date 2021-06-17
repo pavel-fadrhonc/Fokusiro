@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Gamekit2D;
 using UnityEngine;
@@ -7,19 +9,26 @@ namespace DefaultNamespace
 {
     public class ItemRemoval : MonoBehaviour
     {
-        public List<StreamMover> streamMovers;
         public bool removeOnlyDistractions;
-        
+
         public bool triggerEffect;
-        public HitParticlePool effectPool;
 
         public bool focusItemsLosingPoints;
 
+        private HitParticlePool effectPool;
+        private List<StreamMover> streamMovers;
         private AudioSource _audioSource;
         
         private void Awake()
         {
             _audioSource = GetComponent<AudioSource>();
+
+            streamMovers = FindObjectsOfType<StreamMover>().ToList();
+        }
+
+        private void Start()
+        {
+            effectPool = Locator.Instance.HitEffectPool;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

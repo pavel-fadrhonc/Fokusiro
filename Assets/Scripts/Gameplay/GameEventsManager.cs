@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -8,8 +10,6 @@ namespace DefaultNamespace
 {
     public class GameEventsManager : MonoBehaviour
     {
-        public Animator ninjaAnimator;
-        public List<ParticleSystem> shieldPS;
         public Animator flowReachedTextAnim;
         public Animator distractedTextAnim;
         public Animator levelCompleteAnim;
@@ -22,6 +22,15 @@ namespace DefaultNamespace
         public AudioClip distractedClip;
         public AudioClip levelCompleteClip;
         public AudioClip levelFailedClip;
+
+        private List<ParticleSystem> shieldPS;
+        private Animator ninjaAnimator;
+
+        private void Awake()
+        {
+            ninjaAnimator = GameObject.FindGameObjectWithTag("Ninja").GetComponentInChildren<Animator>();
+            shieldPS = GameObject.FindGameObjectWithTag("Shield").GetComponentsInChildren<ParticleSystem>().ToList();
+        }
 
         private void OnEnable()
         {

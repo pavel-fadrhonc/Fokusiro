@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4618484173150012341}
   - component: {fileID: 1887761540728311687}
   - component: {fileID: 1887761540728311800}
+  - component: {fileID: 663493224}
   m_Layer: 0
   m_Name: backGlow
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1887761540728311686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.3, y: 15.9, z: -80.38785}
-  m_LocalScale: {x: 1.0000314, y: 1.0000314, z: 1.0000314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3577166745537227448}
   m_RootOrder: 2
@@ -4695,7 +4696,7 @@ ParticleSystem:
 --- !u!199 &4618484173150012341
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4707,6 +4708,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4719,6 +4721,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4792,6 +4795,18 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!114 &663493224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887761540728311686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce20999392484654a66e41f8791a5962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3577166744722877624
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,6 +4820,7 @@ GameObject:
   - component: {fileID: 3577166744722877627}
   - component: {fileID: 3577166744722877626}
   - component: {fileID: 3577166744722877629}
+  - component: {fileID: 268586787}
   m_Layer: 0
   m_Name: spikes_PS
   m_TagString: Untagged
@@ -4821,7 +4837,7 @@ Transform:
   m_GameObject: {fileID: 3577166744722877624}
   m_LocalRotation: {x: -0, y: -0, z: -0.12446736, w: 0.9922237}
   m_LocalPosition: {x: 1.0227292, y: 17.637938, z: -25.343105}
-  m_LocalScale: {x: 1.0000314, y: 1.0000314, z: 1.0000314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3577166745537227448}
   m_RootOrder: 0
@@ -9487,7 +9503,7 @@ ParticleSystem:
 --- !u!199 &3577166744722877627
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9499,6 +9515,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9511,6 +9528,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9584,6 +9602,18 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!114 &268586787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577166744722877624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce20999392484654a66e41f8791a5962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3577166745132201160
 GameObject:
   m_ObjectHideFlags: 0
@@ -14279,7 +14309,7 @@ ParticleSystem:
 --- !u!199 &3577166745132201164
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14291,6 +14321,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14303,6 +14334,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -14389,6 +14421,7 @@ GameObject:
   - component: {fileID: 3577166745344288144}
   - component: {fileID: 3577166745344288159}
   - component: {fileID: 3577166745344288146}
+  - component: {fileID: 1061751105}
   m_Layer: 0
   m_Name: spikebase_PS
   m_TagString: Untagged
@@ -14405,7 +14438,7 @@ Transform:
   m_GameObject: {fileID: 3577166745344288157}
   m_LocalRotation: {x: -0, y: -0, z: -0.12446736, w: 0.9922237}
   m_LocalPosition: {x: 1.0227292, y: 17.637938, z: -25.343105}
-  m_LocalScale: {x: 1.0000314, y: 1.0000314, z: 1.0000314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3577166745537227448}
   m_RootOrder: 1
@@ -19071,7 +19104,7 @@ ParticleSystem:
 --- !u!199 &3577166745344288144
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -19083,6 +19116,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19095,6 +19129,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -19168,6 +19203,18 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 0}
     weight: 1
+--- !u!114 &1061751105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577166745344288157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce20999392484654a66e41f8791a5962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3577166745537227335
 GameObject:
   m_ObjectHideFlags: 0
@@ -19178,7 +19225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3577166745537227448}
   m_Layer: 8
-  m_Name: Shield
+  m_Name: FlowShield_PS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19191,7 +19238,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3577166745537227335}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.045115, y: -3.2283, z: 0}
   m_LocalScale: {x: 0.10473447, y: 0.10473447, z: 0.10473447}
   m_Children:

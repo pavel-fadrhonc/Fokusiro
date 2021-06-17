@@ -61,6 +61,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -4465,6 +4466,10 @@ ScriptedImporter:
   importedTextureWidth: 2048
   importedTextureHeight: 2048
   documentSize: {x: 2528, y: 3504}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
   textureActualWidth: 4096
   textureActualHeight: 4096
   spritePackingTag: 
@@ -4612,6 +4617,8 @@ ScriptedImporter:
         height: 2954
       spriteId: 0b87e20c7f0ee7742830f3802396c6b4
       bones: 0a0000000d00000000000000010000000700000002000000030000000400000010000000050000001100000012000000080000000f000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 582
         y: 1742
@@ -4619,6 +4626,8 @@ ScriptedImporter:
         height: 895
       spriteId: 3f247bb7d23559746a9af0894c88242b
       bones: 060000000500000004000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 1427
         y: 1762
@@ -4626,6 +4635,8 @@ ScriptedImporter:
         height: 895
       spriteId: dd94dfbd4cbcd2c48bf9000c17f83b40
       bones: 090000000800000007000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 1214
         y: 636
@@ -4633,6 +4644,8 @@ ScriptedImporter:
         height: 1404
       spriteId: 480cdda44c83a044cbc21b04363eb9b2
       bones: 0f0000000e0000000d000000000000000500000010000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 701
         y: 642
@@ -4640,44 +4653,12 @@ ScriptedImporter:
         height: 1404
       spriteId: 245d9b9a4791fbd43b24a32084547ea5
       bones: 0c0000000b0000000a000000000000000500000010000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
-  boneGOs:
-  - go: {fileID: -6802083917238865335, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 0
-  - go: {fileID: 5070212203774901885, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 1
-  - go: {fileID: -6889310876324923138, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 2
-  - go: {fileID: 6663897277161820760, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 3
-  - go: {fileID: -1203640354282895528, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 4
-  - go: {fileID: 7395577037515198513, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 5
-  - go: {fileID: -5475040821328555906, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 6
-  - go: {fileID: -2508790942177186811, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 7
-  - go: {fileID: 8077671518273730326, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 8
-  - go: {fileID: 4791602493066115368, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 9
-  - go: {fileID: 681224187133158815, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 10
-  - go: {fileID: -7080147680096006980, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 11
-  - go: {fileID: -8097219062366759995, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 12
-  - go: {fileID: -577964309756586032, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 13
-  - go: {fileID: 10173198805530906, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 14
-  - go: {fileID: -1639681148536278926, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 15
-  - go: {fileID: 2662448168056541352, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 16
-  - go: {fileID: 2373746563489858705, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 17
-  - go: {fileID: -6902390425101353722, guid: 810d1ba8c70f6d84fb9f0225a182f36c, type: 3}
-    index: 18
+    characterGroups: []
   generateGOHierarchy: 0
+  textureAssetName: zada Texture
+  prefabAssetName: zada Prefab
+  spriteLibAssetName: zada Sprite Lib
+  secondarySpriteTextures: []

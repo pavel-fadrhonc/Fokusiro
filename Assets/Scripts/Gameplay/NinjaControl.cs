@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using OakFramework2;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
+using UnityEngine.InputSystem;
 
 namespace DefaultNamespace
 {
@@ -47,6 +47,12 @@ namespace DefaultNamespace
                 StartCoroutine(ChangeIdleSmooth(0.25f, currIdle, nextIdle));
 
                 _nextIdleChangeTime = Time.time + Random.Range(_randomSpan.x, _randomSpan.y);
+            }
+
+            if (PlayerState.instance.State == ePlayerState.InFlow)
+            {
+                DeactivateRemoval(0);
+                DeactivateRemoval(1);
             }
         }
         
@@ -123,7 +129,7 @@ namespace DefaultNamespace
 
         public void OnAttackRight(InputAction.CallbackContext context)
         {
-            if (disabledInputsList.HasFlag(eDisabledInputType.Right))
+            if (!context.performed || disabledInputsList.HasFlag(eDisabledInputType.Right))
                 return;
             
             _animator.SetTrigger("PunchRight");
@@ -132,7 +138,7 @@ namespace DefaultNamespace
 
         public void OnAttackLeft(InputAction.CallbackContext context)
         {
-            if (disabledInputsList.HasFlag(eDisabledInputType.Left))
+            if (!context.performed || disabledInputsList.HasFlag(eDisabledInputType.Left))
                 return;            
             
             _animator.SetTrigger("PunchLeft");
@@ -141,7 +147,7 @@ namespace DefaultNamespace
 
         public void OnAttackTop(InputAction.CallbackContext context)
         {
-            if (disabledInputsList.HasFlag(eDisabledInputType.Top))
+            if (!context.performed || disabledInputsList.HasFlag(eDisabledInputType.Top))
                 return;            
             
             _animator.SetTrigger("PunchUp");

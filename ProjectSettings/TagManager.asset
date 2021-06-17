@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ninja
+  - HitEffectPool
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -41,9 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: pcguy
-    uniqueID: 2446743357
-    locked: 0
   - name: particles
     uniqueID: 3025549685
+    locked: 0
+  - name: ninja
+    uniqueID: 819026237
+    locked: 0
+  - name: pcguy
+    uniqueID: 2446743357
     locked: 0
